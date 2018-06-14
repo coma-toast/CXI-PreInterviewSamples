@@ -1,5 +1,6 @@
 function palindromeTest(inputPhrase) {
   let splitPhrase = splitString(inputPhrase.toLowerCase(), "");
+  console.log(splitPhrase.length);
   console.log(splitPhrase)
   splitPhrase = removeSpecialChars(splitPhrase)
   //console.log(splitPhrase)
@@ -17,14 +18,13 @@ function splitString(phrase, sep) {
 }
 
 function removeSpecialChars(special) {
-  let noSpecial = []
+  console.log(special);
   for (let i = 0; i < special.length; i++) {
     if (special[i].match(/[a-z0-9]/)) {
-      console.log(noSpecial.push(special[i]))
-      console.log(noSpecial);
+      console.log(special.pop(special[i]))
     }
   }
-  return noSpecial
+  return special
 }
 
 function reverseIt(inputPhrase) {
