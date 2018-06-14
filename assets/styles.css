@@ -8,6 +8,52 @@ h1{
   margin-bottom: 5px;
 }
 
+h2{
+  font-size: 20px;
+  color: #fff;
+  font-weight: 300;
+  margin-bottom: 5px;
+}
+
+.result {
+  font-size: 20px;
+  color: #fff;
+  font-weight: 300;
+  margin-bottom: 5px;
+}
+
+
+/*button settings*/
+button {
+    background-color: rgba(255,255,255,0.3);/*#54C0C0; /* Green */
+    border: solid;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    width: 20em
+}
+
+button:hover {
+  background-color: #51C6FE;
+  color: #000;
+  font-weight: bold;
+  font-size: 16px;
+
+  box-shadow: #199ED9 -1px 1px, #199ED9 -2px 2px, #199ED9 -3px 3px, #199ED9 -4px 4px, #199ED9 -5px 5px, #199ED9 -6px 6px;
+  transform: translate3d(6px, -6px, 0);
+
+  transition-delay: 0s;
+	  transition-duration: 0.4s;
+	  transition-property: all;
+  transition-timing-function: line;
+}
+
+
+
+
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,500,300,700);
 body{
   background: -webkit-linear-gradient(left, #25c481, #25b7c4);
