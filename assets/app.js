@@ -8,7 +8,7 @@ function palindromeTest(inputPhrase) {
   let splitPhrase = splitString(inputPhrase.toLowerCase(), "");
   console.log(splitPhrase.length);
   console.log(splitPhrase)
-  console.log(splitPhrase[0])
+  console.table(splitPhrase);
   palindromeObject.input1 = splitPhrase
   splitPhrase = removeSpecialChars(splitPhrase)
   //console.log(splitPhrase)
@@ -29,26 +29,41 @@ function splitString(phrase, sep) {
   return chars
 }
 
+//somehow this is borking things. unSpecial ends up 4,3,3,4 when using 1234. ???
+
+// function removeSpecialChars(special) {
+//   console.table(special);
+//   let unSpecial = []
+//   console.table(unSpecial)
+//   for (let i = 0; i < special.length; i++) {
+//     console.log(i, "special iteration number")
+//     console.log(special[i])
+//     if (special[i].match(/[a-zA-Z0-9]/gmi)) {
+//       let temp = special[i]
+//       console.table(temp)
+//       console.log(temp)
+//       unSpecial.push(temp)
+//       console.log(special[i])
+//       console.log(unSpecial)
+//       console.table(special)
+//       console.table(unSpecial)
+//     }
+//   }
+//   console.table(unSpecial)
+//   return unSpecial
+// }
+
 function removeSpecialChars(special) {
-  console.table(special);
-  let unSpecial = []
-  console.table(unSpecial)
+
   for (let i = 0; i < special.length; i++) {
-    console.log(i, "special iteration number")
-    console.log(special[i])
-    if (special[i].match(/[a-zA-Z0-9]/gmi)) {
-      let temp = special[i]
-      console.table(temp)
-      console.log(temp)
-      unSpecial.push(temp)
-      console.log(special[i])
-      console.log(unSpecial)
-      console.table(special)
-      console.table(unSpecial)
+    console.log(special[i]);
+    if (special[i].match(/[^a-zA-Z0-9]/g)) {
+      console.log("splice");
+      console.log(special.splice(i, 1))
     }
-  }
-  console.table(unSpecial)
-  return unSpecial
+}
+  console.log(special);
+  return special
 }
 
 function reverseIt(inputPhrase) {
