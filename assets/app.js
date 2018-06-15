@@ -1,12 +1,24 @@
+var palindromeObject = {
+  input1:[],
+  input2:[]
+};
+
+
 function palindromeTest(inputPhrase) {
   let splitPhrase = splitString(inputPhrase.toLowerCase(), "");
   console.log(splitPhrase.length);
   console.log(splitPhrase)
+  console.log(splitPhrase[0])
+  palindromeObject.input1 = splitPhrase
   splitPhrase = removeSpecialChars(splitPhrase)
   //console.log(splitPhrase)
+
+  console.log(palindromeObject)
   console.log(splitPhrase, "fwd");
   let splitPhraseReverse = reverseIt(splitPhrase)
   console.log(splitPhraseReverse, "rev");
+  palindromeObject.input2 = splitPhraseReverse
+  console.log(palindromeObject)
   var results
   results = isPalindrome(splitPhrase, splitPhraseReverse)
   console.log(results);
@@ -18,17 +30,40 @@ function splitString(phrase, sep) {
 }
 
 function removeSpecialChars(special) {
-  console.log(special);
+  console.table(special);
+  let unSpecial = []
+  console.table(unSpecial)
   for (let i = 0; i < special.length; i++) {
-    if (special[i].match(/[a-z0-9]/)) {
-      console.log(special.pop(special[i]))
+    console.log(i, "special iteration number")
+    console.log(special[i])
+    if (special[i].match(/[a-zA-Z0-9]/gmi)) {
+      let temp = special[i]
+      console.table(temp)
+      console.log(temp)
+      unSpecial.push(temp)
+      console.log(special[i])
+      console.log(unSpecial)
+      console.table(special)
+      console.table(unSpecial)
     }
   }
-  return special
+  console.table(unSpecial)
+  return unSpecial
 }
 
 function reverseIt(inputPhrase) {
-  let outputPhrase = inputPhrase.reverse()
+  var outputPhrase = []
+  outputPhrase = inputPhrase
+  console.log(inputPhrase, "in")
+  // outputPhrase = outputPhrase.reverse()
+  for (let i = 0; i < outputPhrase.length; i++) {
+    console.log(i, "i")
+    let x = inputPhrase.length-i-1
+    console.log(x, "x")
+    outputPhrase[i] = inputPhrase[x]
+
+    console.log(outputPhrase[i])
+  }
   return outputPhrase
 }
 
