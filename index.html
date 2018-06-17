@@ -1,5 +1,6 @@
 <head>
   <link rel="stylesheet" href="assets/styles.css">
+  <link rel="shortcut icon"href="assets/favicon.png">
 </head>
 <section>
   <h1>CXI Eng Pre-Interview Code Samples</h1>
@@ -10,24 +11,42 @@
     <br>
     <button type="button" onclick="palindromeTest('Kayak')">​Kayak</button>
     <br>
+    <button type="button" onclick="palindromeTest('Kayaks')">​Kayaks</button>
+    <br>
     <button type="button" onclick="palindromeTest('123321')">​123321</button>
     <br>
-    <button type="button" onclick="palindromeTest('1234')">​1234</button>
+    <button type="button" onclick="palindromeTest('123421')">​123421</button>
     <br>
     <button type="button" onclick="palindromeTest('Banan@')">Banan@</button>
     <br>
     <p>
-    <div id="palindromeResult1" class="result"></div>
+    <div id="palindromeResult1" class="result">Output:</div>
   </p>
   </div>
 
   <br>
-  <div id="duplicates"></div>
+  <div id="duplicates">
+    <h2>Most Duplicate Letters</h2>
+    <button type="button" onclick="duplicateTest('O Romeo, Romeo, wherefore art thou Romeo?')">O Romeo, Romeo, wherefore art thou Romeo?</button>
+    <br>
+    <button type="button" onclick="duplicateTest('Some people feel the rain, while others just get wet.')">​Some people feel the rain, while others just get wet.</button>
+    <br>
+    <button type="button" onclick="duplicateTest('Jason Dale is the best candidate, that much is clear.')">Jason Dale is the best candidate, that much is clear.</button>
+    <br>
+    <button type="button" onclick="duplicateTest('oneword..')">oneword.</button>
+    <br>
+    <p>
+    <div id="duplicateResult1" class="result">Output:</div>
+
+
+  </div>
+
   <br>
   <div id="brackets"></div>
 
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script type"text/javascript" src="assets/app.js"></script>
+  <script src="assets/helper.js"></script>
 </body>
 </section>
