@@ -5,6 +5,7 @@ var palindromeObject = {
 
 var duplicateObject = {
   currentWord:'',
+  currentCount:'',
   topWord: '',
   topLetter: '',
   topLetterCount: 0
@@ -27,7 +28,7 @@ function palindromeTest(inputPhrase) {
 
 function isPalindrome(input1, input2) {
   for (let i = 0; i < input1.length; i++) {
-    console.log(input1[i], input2[i], "compare");
+    console.log("compare:", input1[i], input2[i]);
     if (input1[i] != input2[i]) {
       console.log("fake news");
       $("#palindromeResult1").html("Output: False")
@@ -39,10 +40,16 @@ function isPalindrome(input1, input2) {
   }
 }
 
+//can probably make this cleaner with array.map
 function duplicateTest(inputPhrase) {
   let duplicateSplit = splitString(inputPhrase, " ")
   for (var i = 0; i < duplicateSplit.length; i++) {
-    let topWord = countLetters(duplicateSplit[i])
+    let dupChars = splitString(duplicateSplit[i], "")
+    dupChars = removeSpecialChars(dupChars)
+    dupChars = lowerIt(dupChars)
+    duplicateObject.currentWord = unsplitString(duplicateSplit,"")
+    let topWord = sortLetters(dupChars)
+
   }
   console.log(duplicateObject);
 }
