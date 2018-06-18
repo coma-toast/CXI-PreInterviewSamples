@@ -29,12 +29,9 @@ function lowerIt (input) {
 
 
 function removeSpecialChars(special) {
-  console.log(special);
   for (let i = 0; i < special.length; i++) {
 
     if (special[i].match(/[^a-zA-Z0-9\ ]/gmi)) {
-
-      console.log("splice");
       special.splice(i, 1)
     }
 }
@@ -46,9 +43,9 @@ function reverseIt(inputPhrase) {
   var outputPhrase = []
   outputPhrase = inputPhrase
   for (let i = 0; i < outputPhrase.length; i++) {
-    console.log(i, "i")
+
     let x = inputPhrase.length-i-1
-    console.log(x, "x")
+
     outputPhrase[i] = inputPhrase[x]
 
     console.log(outputPhrase[i])
@@ -68,24 +65,36 @@ function reverseIt(inputPhrase) {
 // }
 
 function countLetters (word) {
-  console.log(word);
-  let alphabet = []
-  //word = splitString(word, "")
-  console.log(word);
+  let foundLetters = []
   for (var i = 0; i < word.length; i++) {
     console.log(word[i]);
-    let searchLetter = word[i].match(alphabet[0-alphabet.length])
-    console.log(searchLetter);
-    if (searchLetter == true) {
-      console.log("found");
-      duplicateObject.topWord = word
-      duplicateObject.topLetter = word[i]
-      console.log(alphabet);
+    if (foundLetters.includes(word[i])) {
+      console.log("yes");
+      trackCount(foundLetters, word[i])
     } else {
-      console.log("not found");
-      console.log(alphabet.push(word[i]))
-      console.log(alphabet);
+      foundLetters.push(word[i])
     }
+    console.log(foundLetters);
+    // let searchLetter =
+
   }
 
 }
+
+function trackCount (foundLetters, letter) {
+  for (var i = 0; i < foundLetters.length; i++) {
+    if (letter == foundLetters[i]) {
+        console.log("letter == foundLetters[i]");
+        if (typeof foundLetters[i].count === 'undefined') {
+          foundLetters[i] = {
+            foundLetter: letter,
+            count: 1
+          }
+        } else {
+            foundLetters[i].count++
+          }
+        }
+        console.log(foundLetters);
+
+    }
+  }
