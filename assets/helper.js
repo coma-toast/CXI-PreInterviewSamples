@@ -70,6 +70,9 @@ function sortLetters (word) {
       foundLetters.push(word[i])
     }
   }
+  if (dupLetters === undefined || dupLetters.length ==0) {
+    return
+  }
   dupLetters.sort();
   let map = dupLetters.reduce(function(prev,cur) {
     prev[cur] = (prev[cur] || 0) +1
@@ -77,72 +80,21 @@ function sortLetters (word) {
   }, {})
   console.log(map);
   let maxLetters = sortDups(map)
-  if (countLetters(dupLetters)) {
+  console.log(maxLetters);
+  if (maxLetters) {
     duplicateObject.topWord = unsplitString(word, " ")
-  }
-  console.log(dupLetters);
-  if (duplicateObject.topWord == "") {
-    duplicateObject.topWord = duplicateObject.currentWord
-  }
-  if (duplicateObject.topLetter == "") {
-    duplicateObject.topLetter = dupLetters[0]
   }
   console.log(duplicateObject);
 }
 
-function countLetters (dupLetters) {
-  let current = dupLetters[0];
-  let cnt = 1;
-  for (let i = 0; i < dupLetters.length; i++) {
-    if (dupLetters[i] != current) {
-      console.log(cnt);
-      current = dupLetters[i]
-      duplicateObject.currentCount = cnt;
-      cnt = 1
-    } else if (dupLetters[i] == current) {
-      cnt++
-        console.log(cnt);
-    }
-  }
-  if (cnt >= duplicateObject.topLetterCount) {
-    duplicateObject.topLetterCount = cnt;
-    console.log(cnt,"topLetterCount");
-    return true
-
-  } else if (cnt < duplicateObject.topLetterCount) {
-    return false
-  }
-}
 
 function sortDups (map) {
   console.log(map);
   for (let key in map) {
-    console.log(map[key]);
     if (map[key] > duplicateObject.topLetterCount) {
       duplicateObject.topLetterCount = map[key]
+      duplicateObject.topLetter = `${key}`
+      return true
     }
   }
 }
-
-//need to return the most common letter and count of that letter
-//actually, a sort and then counting
-// function trackCount (foundLetters, letter) {
-//   if (duplicateObject.topWord == 'undefined') {
-//     duplicateObject.topWord == unsplitString(foundLetters)
-//   }
-//   for (var i = 0; i < foundLetters.length; i++) {
-//     if (letter == foundLetters[i]) {
-//         console.log("letter == foundLetters[i]");
-//         if (typeof foundLetters[i].count === 'undefined') {
-//           foundLetters[i] = {
-//             foundLetter: letter,
-//             count: 1
-//           }
-//         } else {
-//             foundLetters[i].count++
-//           }
-//         }
-//         console.log(foundLetters);
-//
-//     }
-//   }

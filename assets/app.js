@@ -11,7 +11,6 @@ var duplicateObject = {
   topLetterCount: 0
 }
 
-
 function palindromeTest(inputPhrase) {
   inputPhrase = noSpace(inputPhrase)
   let splitPhrase = splitString(inputPhrase, "");
@@ -35,21 +34,23 @@ function isPalindrome(input1, input2) {
       break
     } else {
       $("#palindromeResult1").html("Output: True")
-
     }
   }
 }
 
-//can probably make this cleaner with array.map
+//can probably make this cleaner with array.map or something
 function duplicateTest(inputPhrase) {
+  duplicateObject.topWord = ""
+  duplicateObject.topLetter = ""
+  duplicateObject.topLetterCount = 0
   let duplicateSplit = splitString(inputPhrase, " ")
   for (var i = 0; i < duplicateSplit.length; i++) {
     let dupChars = splitString(duplicateSplit[i], "")
     dupChars = removeSpecialChars(dupChars)
     dupChars = lowerIt(dupChars)
-    duplicateObject.currentWord = unsplitString(duplicateSplit,"")
+    duplicateObject.currentWord = unsplitString(dupChars," ")
     let topWord = sortLetters(dupChars)
-
   }
   console.log(duplicateObject);
+  $("#duplicateResult1").html("Output: " + noSpace(duplicateObject.topWord))
 }
