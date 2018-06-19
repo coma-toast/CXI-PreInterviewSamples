@@ -49,16 +49,6 @@ function reverseIt(inputPhrase) {
 }
 
 
-// function countLetters (word) {
-//   for (var i = 0; i < word.length; i++) {
-//     if (word[i] == duplicateObject.topLetter) {
-//       duplicateObject.word = word
-//       duplicateObject.topLetterCount++
-//
-//     }
-//   }
-// }
-
 function sortLetters (word) {
   let foundLetters = []
   let dupLetters = []
@@ -98,3 +88,33 @@ function sortDups (map) {
     }
   }
 }
+
+function partenth(input) {
+  console.log(input);
+  let count = 0
+  for (let i = 0; i < input.length; i++) {
+    if (input[i] !== "(" || ")") {
+      console.log("text detected");
+      $("#bracketResult1").html("Output: Please only use ( or )")
+      error = true
+      break
+    } else if (input[0] == ')') {
+        console.log("First is ). Fail.");
+        return false
+    } else if (count <= -1) {
+        console.log("More ) than ( as the string traverses");
+        return false
+    } else if (input[i] == '(') {
+        console.log("+1");
+        count++
+    } else if (input[i] == ')') {
+        console.log("-1");
+        count--
+      }
+    }
+    if (count == 0 || error != true) {
+        return true
+      } else {
+        return false
+        }
+    }

@@ -54,3 +54,18 @@ function duplicateTest(inputPhrase) {
   console.log(duplicateObject);
   $("#duplicateResult1").html("Output: " + noSpace(duplicateObject.topWord))
 }
+
+function bracketTest(inputPhrase) {
+  var error = false
+  let splitBrackets = splitString(inputPhrase, "")
+  let splitBracketsResult = partenth(splitBrackets)
+  console.log(splitBracketsResult);
+  if (splitBracketsResult) {
+    console.log("true");
+      $("#bracketResult1").html("Output: True")
+  } else if (!splitBracketsResult) {
+      $("#bracketResult1").html("Output: False")
+  } else if (error == true) {
+    console.log("error");
+  }
+}

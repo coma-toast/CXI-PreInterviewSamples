@@ -19,6 +19,12 @@
     <br>
     <button type="button" onclick="palindromeTest('Banan@')">Banan@</button>
     <br>
+    <br>
+    <div id="normalText">Try your own:</div>
+    <input type="text" id="userInputP" name="userInput">
+    <br>
+    <br>
+    <button type="button" id="submitButton" onclick="palindromeTest(document.getElementById('userInputP').value)">Submit</button>
     <p>
     <div id="palindromeResult1" class="result">Output:</div>
   </p>
@@ -33,16 +39,37 @@
     <br>
     <button type="button" onclick="duplicateTest('Jason Dale is the best candidate, that much is clear.')">Jason Dale is the best candidate, that much is clear.</button>
     <br>
-    <button type="button" onclick="duplicateTest('onreworrdoorrr.')">onreworrdoorrr.</button>
+    <button type="button" onclick="duplicateTest('Test testt teest')">Test testt teest</button>
     <br>
+    <div id="normalText">Try your own:</div>
+    <input type="text" id="userInputD" name="userInput">
+    <br>
+    <br>
+    <button type="button" id="submitButton" onclick="duplicateTest(document.getElementById('userInputD').value)">Submit</button>
+
     <p>
     <div id="duplicateResult1" class="result">Output:</div>
-
-
   </div>
 
   <br>
   <div id="brackets"></div>
+    <h2>Bracketology</h2>
+    <button type="button" onclick="bracketTest('(()))()')">(()))()</button>
+    <br>
+    <button type="button" onclick="bracketTest('()()(()())')">()()(()())</button>
+    <br>
+    <button type="button" onclick="bracketTest(')()(')">)()(</button>
+    <br>
+    <div id="bracketResult1" class="result">Output:</div>
+    <br>
+    <div id="normalText">Try your own:</div>
+    <input type="text" id="userInputB" name="userInput">
+    <br>
+    <br>
+    <button type="button" id="submitButton" onclick="bracketTest(document.getElementById('userInputB').value)">Submit</button>
+
+
+
 
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
