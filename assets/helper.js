@@ -93,12 +93,7 @@ function partenth(input) {
   console.log(input);
   let count = 0
   for (let i = 0; i < input.length; i++) {
-    if (input[i] !== "(" || ")") {
-      console.log("text detected");
-      $("#bracketResult1").html("Output: Please only use ( or )")
-      error = true
-      break
-    } else if (input[0] == ')') {
+    if (input[0] == ')') {
         console.log("First is ). Fail.");
         return false
     } else if (count <= -1) {
@@ -112,7 +107,7 @@ function partenth(input) {
         count--
       }
     }
-    if (count == 0 || error != true) {
+    if (count == 0) {
         return true
       } else {
         return false

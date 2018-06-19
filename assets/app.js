@@ -56,7 +56,6 @@ function duplicateTest(inputPhrase) {
 }
 
 function bracketTest(inputPhrase) {
-  var error = false
   let splitBrackets = splitString(inputPhrase, "")
   let splitBracketsResult = partenth(splitBrackets)
   console.log(splitBracketsResult);
@@ -65,7 +64,5 @@ function bracketTest(inputPhrase) {
       $("#bracketResult1").html("Output: True")
   } else if (!splitBracketsResult) {
       $("#bracketResult1").html("Output: False")
-  } else if (error == true) {
-    console.log("error");
   }
 }
