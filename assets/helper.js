@@ -98,7 +98,7 @@ function partenth(input) {
         console.error("First is ). Fail.");
         throw (new Error("First is ). Fail."))
         return Error
-    } else if (input[i] != "(" || input[i] != ")") {
+    } else if (input[i] != "(" && input[i] != ")") {
         console.error("Only ( or ) allowed.")
         throw (new Error("Only ( or ) allowed."))
         return Error
