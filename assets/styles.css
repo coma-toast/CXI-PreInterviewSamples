@@ -44,9 +44,12 @@ h2{
 
 .flex-item {
   padding: 20px;
-  width: 30%;
+  width: 35%;
 
-  /* border-: 2px solid white; */
+  /* uncomment to see the grid */
+  /* border: 2px solid white; */
+  max-width: 400px;
+  min-width: 290px;
   border-color: #fff;
   border-radius: 5px;
 }
@@ -70,8 +73,10 @@ h2{
 button {
     display: inline-block;
 
+    margin: 5px;
+    height: 60px;
     width: 20em;
-    padding: 15px 32px;
+    /* padding: 15px 32px; */
 
     text-align: center;
     text-decoration: none;
