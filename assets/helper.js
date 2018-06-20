@@ -93,17 +93,24 @@ function partenth(input) {
   console.log(input);
   let count = 0
   for (let i = 0; i < input.length; i++) {
+    console.log(input[i]);
     if (input[0] == ')') {
-        console.log("First is ). Fail.");
-        return false
+        console.error("First is ). Fail.");
+        throw (new Error("First is ). Fail."))
+        return Error
+    } else if (input[i] != "(" || input[i] != ")") {
+        console.error("Only ( or ) allowed.")
+        throw (new Error("Only ( or ) allowed."))
+        return Error
     } else if (count <= -1) {
-        console.log("More ) than ( as the string traverses");
-        return false
+        console.error("More ) than ( as the string traverses");
+        throw (new Error("More ) than ( as the string traverses"));
+        return Error
     } else if (input[i] == '(') {
-        console.log("+1");
+        console.log(count, "+1");
         count++
     } else if (input[i] == ')') {
-        console.log("-1");
+        console.log(count, "-1");
         count--
       }
     }

@@ -58,12 +58,17 @@ function duplicateTest(inputPhrase) {
 
 function bracketTest(inputPhrase) {
   let splitBrackets = splitString(inputPhrase, "")
-  let splitBracketsResult = partenth(splitBrackets)
-  console.log(splitBracketsResult);
-  if (splitBracketsResult) {
-    console.log("true");
-      $("#bracketResult1").html("Output: True")
-  } else if (!splitBracketsResult) {
-      $("#bracketResult1").html("Output: False")
+
+  try {
+    let splitBracketsResult = partenth(splitBrackets)
+    if (splitBracketsResult) {
+      console.log("true");
+        $("#bracketResult1").html("Output: True")
+    } else if (!splitBracketsResult) {
+        $("#bracketResult1").html("Output: False")
+    }
+  } catch (e) {
+    console.log(e.name, e.message);
+    $("#bracketResult1").html("Output: " + e)
   }
 }
