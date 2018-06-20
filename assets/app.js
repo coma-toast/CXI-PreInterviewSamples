@@ -40,6 +40,7 @@ function isPalindrome(input1, input2) {
 
 //can probably make this cleaner with array.map or something
 function duplicateTest(inputPhrase) {
+  //reset variables each time the function is called (button is pressed)
   duplicateObject.topWord = ""
   duplicateObject.topLetter = ""
   duplicateObject.topLetterCount = 0

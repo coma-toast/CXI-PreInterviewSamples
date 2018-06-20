@@ -2,71 +2,92 @@
   <link rel="stylesheet" href="assets/styles.css">
   <link rel="shortcut icon"href="assets/favicon.png">
 </head>
-<section>
-  <h1>CXI Eng Pre-Interview Code Samples</h1>
+<h1>CXI Eng Pre-Interview Code Samples</h1>
+<div class="flex-container">
   <body>
-  <div id="palindrome">
-    <h2>Palindromes</h2>
-    <button type="button" onclick="palindromeTest('​A man, a plan, a canal, Panama!')">​A man, a plan, a canal, Panama!</button>
-    <br>
-    <button type="button" onclick="palindromeTest('Kayak')">​Kayak</button>
-    <br>
-    <button type="button" onclick="palindromeTest('Kayaks')">​Kayaks</button>
-    <br>
-    <button type="button" onclick="palindromeTest('123321')">​123321</button>
-    <br>
-    <button type="button" onclick="palindromeTest('123421')">​123421</button>
-    <br>
-    <button type="button" onclick="palindromeTest('Banan@')">Banan@</button>
-    <br>
-    <br>
-    <div id="normalText">Try your own:</div>
-    <input type="text" id="userInputP" name="userInput">
-    <br>
-    <br>
-    <button type="button" id="submitButton" onclick="palindromeTest(document.getElementById('userInputP').value)">Submit</button>
-    <p>
-    <div id="palindromeResult1" class="result">Output:</div>
-  </p>
-  </div>
+      <div class="flex-item">
+        <div class="row">
+            <div id="palindrome">
+              <h2>Palindromes</h2>
+              <button type="button" onclick="palindromeTest('​A man, a plan, a canal, Panama!')">​A man, a plan, a canal, Panama!</button>
+              <br>
+              <button type="button" onclick="palindromeTest('Kayak')">​Kayak</button>
+              <br>
+              <button type="button" onclick="palindromeTest('Kayaks')">​Kayaks</button>
+              <br>
+              <button type="button" onclick="palindromeTest('123321')">​123321</button>
+              <br>
+              <button type="button" onclick="palindromeTest('123421')">​123421</button>
+              <br>
+              <button type="button" onclick="palindromeTest('Banan@')">Banan@</button>
 
-  <br>
-  <div id="duplicates">
-    <h2>Most Duplicate Letters</h2>
-    <button type="button" onclick="duplicateTest('O Romeo, Romeo, wherefore art thou Romeo?')">O Romeo, Romeo, wherefore art thou Romeo?</button>
-    <br>
-    <button type="button" onclick="duplicateTest('Some people feel the rain, while others just get wet.')">​Some people feel the rain, while others just get wet.</button>
-    <br>
-    <button type="button" onclick="duplicateTest('Jason Dale is the best candidate, that much is clear.')">Jason Dale is the best candidate, that much is clear.</button>
-    <br>
-    <button type="button" onclick="duplicateTest('Test testt teest')">Test testt teest</button>
-    <br>
-    <div id="normalText">Try your own:</div>
-    <input type="text" id="userInputD" name="userInput">
-    <br>
-    <br>
-    <button type="button" id="submitButton" onclick="duplicateTest(document.getElementById('userInputD').value)">Submit</button>
 
-    <p>
-    <div id="duplicateResult1" class="result">Output:</div>
-  </div>
+          </div>
+        </div>
+      </div>
 
-  <br>
-  <div id="brackets"></div>
-    <h2>Bracketology</h2>
-    <button type="button" onclick="bracketTest('(()))()')">(()))()</button>
-    <br>
-    <button type="button" onclick="bracketTest('()()(()())')">()()(()())</button>
-    <br>
-    <button type="button" onclick="bracketTest(')()(')">)()(</button>
-    <br>
-    <div id="bracketResult1" class="result">Output:</div>
-    <br>
-    <div id="normalText">Try your own:</div>
-    <input type="text" id="userInputB" name="userInput">
-    <br>
-    <br>
-    <button type="button" id="submitButton" onclick="bracketTest(document.getElementById('userInputB').value)">Submit</button>
+        <div class="flex-item">
+            <div id="duplicates">
+              <h2>Most Duplicate Letters</h2>
+              <button type="button" onclick="duplicateTest('O Romeo, Romeo, wherefore art thou Romeo?')">O Romeo, Romeo, wherefore art thou Romeo?</button>
+              <br>
+              <button type="button" onclick="duplicateTest('Some people feel the rain, while others just get wet.')">​Some people feel the rain, while others just get wet.</button>
+              <br>
+              <button type="button" onclick="duplicateTest('Jason Dale is the best candidate, that much is clear.')">Jason Dale is the best candidate, that much is clear.</button>
+              <br>
+              <button type="button" onclick="duplicateTest('Test testt teest')">Test testt teest</button>
+
+            </div>
+          </div>
+
+        <div class="flex-item">
+          <div id="brackets"></div>
+          <h2>Bracketology</h2>
+          <button type="button" onclick="bracketTest('(()))()')">(()))()</button>
+          <br>
+          <button type="button" onclick="bracketTest('()()(()())')">()()(()())</button>
+          <br>
+          <button type="button" onclick="bracketTest(')()(')">)()(</button>
+
+      </div>
+    </div>
+
+    </div>
+    <div class="flex-container">
+      <div class="flex-item">
+          <div id="normalText">Try your own:</div>
+          <input type="text" id="userInputP" name="userInput">
+          <br>
+          <br>
+          <button type="button" id="submitButton" onclick="palindromeTest(document.getElementById('userInputP').value)">Submit</button>
+          <p>
+            <div id="palindromeResult1" class="result">Output:</div>
+        </div>
+
+
+        <div class="flex-item">
+          <div id="normalText">Try your own:</div>
+          <input type="text" id="userInputD" name="userInput">
+          <br>
+          <br>
+          <button type="button" id="submitButton" onclick="duplicateTest(document.getElementById('userInputD').value)">Submit</button>
+          <p>
+            <div id="duplicateResult1" class="result">Output:</div>
+        </div>
+
+        <div class="flex-item">
+          <div id="normalText">Try your own:</div>
+          <input type="text" id="userInputB" name="userInput">
+          <br>
+          <br>
+          <button type="button" id="submitButton" onclick="bracketTest(document.getElementById('userInputB').value)">Submit</button>
+          <p>
+            <div id="bracketResult1" class="result">Output:</div>
+        </div>
+        </div>
+
+
+
 
 
 
@@ -76,4 +97,3 @@
   <script type"text/javascript" src="assets/app.js"></script>
   <script src="assets/helper.js"></script>
 </body>
-</section>

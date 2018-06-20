@@ -27,10 +27,8 @@ function lowerIt (input) {
   return input
 }
 
-
 function removeSpecialChars(special) {
   for (let i = 0; i < special.length; i++) {
-
     if (special[i].match(/[^a-zA-Z0-9\ ]/gmi)) {
       special.splice(i, 1)
     }
@@ -38,15 +36,17 @@ function removeSpecialChars(special) {
   return special
 }
 
-function reverseIt(inputPhrase) {
-  var outputPhrase = []
-  outputPhrase = inputPhrase
-  for (let i = 0; i < outputPhrase.length; i++) {
-    let x = inputPhrase.length-i-1
-    outputPhrase[i] = inputPhrase[x]
-  }
-  return outputPhrase
-}
+//This was a different way I was trying to reverse the string first.
+//It's not used but I think the logic is sound.
+//Left it so you can see part of my thought process.
+// function reverseIt(inputPhrase) {
+//   var outputPhrase = []
+//   for (let i = 0; i < inputPhrase.length; i++) {
+//     let x = inputPhrase.length-i-1
+//     outputPhrase[i] = inputPhrase[x]
+//   }
+//   return outputPhrase
+// }
 
 
 function sortLetters (word) {

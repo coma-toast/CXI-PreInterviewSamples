@@ -1,73 +1,117 @@
 
 h1{
-  font-size: 30px;
-  color: #fff;
-  text-transform: uppercase;
-  font-weight: 300;
-  text-align: center;
   margin-bottom: 5px;
+
+  text-align: center;
+  text-transform: uppercase;
+
+  color: #fff;
+
+  font-size: 30px;
+  font-weight: 300;
 }
 
 h2{
-  font-size: 20px;
-  color: #fff;
-  font-weight: 300;
   margin-bottom: 5px;
+
+  color: #fff;
+
+  font-size: 20px;
+  font-weight: 300;
 }
 
 .result {
-  font-size: 20px;
-  color: #fff;
-  font-weight: 300;
   margin-bottom: 5px;
+
+  color: #fff;
+
+  font-size: 20px;
+  font-weight: 300;
 }
 
 #normalText {
-  font-size: 20px;
-  color: #fff;
-  font-weight: 300;
   margin-bottom: 5px;
+
+  color: #fff;
+
+  font-size: 20px;
+  font-weight: 300;
 }
+
+.flex-container {
+  display: flex;
+}
+
+.flex-item {
+  padding: 20px;
+  width: 30%;
+
+  /* border-: 2px solid white; */
+  border-color: #fff;
+  border-radius: 5px;
+}
+
+
+
+/* #palindrome {
+  display: flex ;
+  flex-direction: row ;
+  flex-wrap: wrap ;
+  justify-content: space-around ;
+  align-items: center ;
+  align-content: center ;
+} */
+
+
+
 
 
 /*button settings*/
 button {
-    background-color: rgba(255,255,255,0.3);/*#54C0C0; /* Green */
-    border: solid;
-    color: white;
+    display: inline-block;
+
+    width: 20em;
     padding: 15px 32px;
+
     text-align: center;
     text-decoration: none;
-    display: inline-block;
+
+    color: white;
+    border: solid;
+    background-color: rgba(255,255,255,0.3);/*#54C0C0; /* Green */
+
     font-size: 16px;
-    width: 20em
 }
 
 #submitButton {
-  background-color: rgba(255,255,255,0.3);/*#54C0C0; /* Green */
-  border: solid;
-  color: white;
+  display: inline-block;
+
+  width: 10em;
   padding: 15px 32px;
+
   text-align: center;
   text-decoration: none;
-  display: inline-block;
+
+  color: white;
+  border: solid;
+  background-color: rgba(255,255,255,0.3);/*#54C0C0; /* Green */
+
   font-size: 16px;
-  width: 10em
 }
 
 button:hover {
-  background-color: #51C6FE;
-  color: #000;
-  font-weight: bold;
-  font-size: 16px;
-
-  box-shadow: #199ED9 -1px 1px, #199ED9 -2px 2px, #199ED9 -3px 3px, #199ED9 -4px 4px, #199ED9 -5px 5px, #199ED9 -6px 6px;
-  transform: translate3d(6px, -6px, 0);
-
   transition-delay: 0s;
+  transition-timing-function: line;
 	  transition-duration: 0.4s;
 	  transition-property: all;
-  transition-timing-function: line;
+  transform: translate3d(6px, -6px, 0);
+
+  color: #000;
+  background-color: #51C6FE;
+  box-shadow: #199ED9 -1px 1px, #199ED9 -2px 2px, #199ED9 -3px 3px, #199ED9 -4px 4px, #199ED9 -5px 5px, #199ED9 -6px 6px;
+
+  font-size: 16px;
+  font-weight: bold;
 }
 
 
@@ -77,5 +121,6 @@ button:hover {
 body{
   background: -webkit-linear-gradient(left, #25c481, #25b7c4);
   background: linear-gradient(to right, #0080C6, #54C0C0);
+
   font-family: 'Roboto', sans-serif;
 }
