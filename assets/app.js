@@ -62,7 +62,6 @@ function bracketTest(inputPhrase) {
   try {
     let splitBracketsResult = partenth(splitBrackets)
     if (splitBracketsResult) {
-      console.log("true");
         $("#bracketResult1").html("Output: True")
     } else if (!splitBracketsResult) {
         $("#bracketResult1").html("Output: False")
